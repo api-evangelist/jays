@@ -1,7 +1,28 @@
 aid: jays
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jays.png
 name: Jays
-description: 'Jays is a company surfaced as a portfolio company of creandum and added to the API Evangelist
-  network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  JAYS is a Swedish consumer audio brand founded in 2006 by Jens and Johan,
+  headquartered in Sweden and owned by the Northbaze Group AB. It designs and
+  sells wireless and wired headphones, true-wireless earbuds, Bluetooth and
+  multiroom speakers, and audio accessories, sold direct-to-consumer through a
+  Shopify storefront at jaysheadphones.com. JAYS publishes no first-party
+  developer API; its only machine-accessible surface is the Shopify-provided
+  agent-commerce layer: a Universal Commerce Protocol (UCP) merchant profile
+  with a hosted MCP shopping endpoint, Customer Account OpenID Connect / OAuth
+  discovery documents, and an llms.txt. This profile was surfaced as a Creandum
+  portfolio/commitment lead and enriched by the API Evangelist pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/jays/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,13 +32,42 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Consumer
+- Audio
+- Headphones
+- Consumer Electronics
+- Ecommerce
+- Agent Commerce
 apis: []
+common:
+- type: DomainSecurity
+  url: security/jays-domain-security.yml
+- type: Website
+  url: https://jaysheadphones.com
+- type: Blog
+  url: https://jaysheadphones.com/blogs/news
+- type: Support
+  url: https://jaysheadphones.com/pages/customer-service
+- type: PrivacyPolicy
+  url: https://jaysheadphones.com/pages/privacy-policy
+- type: TermsOfService
+  url: https://jaysheadphones.com/pages/terms-of-use
+- type: WellKnown
+  url: well-known/jays-well-known.yml
+- type: MCPServer
+  url: mcp/jays-mcp.yml
+- type: LLMsTxt
+  url: llms/jays-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1

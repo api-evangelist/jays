@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: live probe of https://jaysheadphones.com/.well-known/*
+host: https://jaysheadphones.com
+note: >-
+  JAYS runs its storefront on Shopify (store jays-swe.myshopify.com). The
+  discovery documents below are served at the JAYS host but are provided by the
+  Shopify Customer Account + Universal Commerce Protocol (UCP) storefront
+  infrastructure, not a JAYS first-party developer API. The openid-configuration
+  issuer is https://shopify.com/authentication/39504478371.
+documents:
+- path: /.well-known/openid-configuration          # OIDC discovery (Shopify Customer Account)
+  status: 200
+  file: jays-openid-configuration.json
+- path: /.well-known/oauth-authorization-server     # RFC 8414 (Shopify Customer Account)
+  status: 200
+  file: jays-oauth-authorization-server.json
+- path: /.well-known/ucp                            # Universal Commerce Protocol merchant profile
+  status: 200
+  file: jays-ucp.json
+- path: /.well-known/security.txt                   # RFC 9116
+  status: 404
+- path: /.well-known/api-catalog                    # RFC 9727
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
