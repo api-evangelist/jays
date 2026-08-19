@@ -2,12 +2,10 @@ generated: '2026-07-20'
 method: searched
 status: published
 source: https://jaysheadphones.com/.well-known/ucp
-note: >-
-  JAYS exposes an agent-commerce surface through Shopify's Universal Commerce
-  Protocol (UCP). The UCP merchant profile advertises a hosted MCP endpoint for
-  the "dev.ucp.shopping" service. This is Shopify-provided storefront
-  infrastructure (store jays-swe.myshopify.com), not a JAYS-authored developer
-  API. Tools are defined by the UCP shopping schema, not per-operation here.
+note: JAYS exposes an agent-commerce surface through Shopify's Universal Commerce Protocol (UCP). The
+  UCP merchant profile advertises a hosted MCP endpoint for the "dev.ucp.shopping" service. This is Shopify-provided
+  storefront infrastructure (store jays-swe.myshopify.com), not a JAYS-authored developer API. Tools are
+  defined by the UCP shopping schema, not per-operation here.
 server:
   name: jays-ucp-shopping
   transport: http
@@ -27,3 +25,11 @@ services:
   - dev.ucp.shopping.discount
   - dev.ucp.shopping.cart
 tools: []
+deployment:
+  mode: remote
+  endpoint: https://jays-swe.myshopify.com/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
